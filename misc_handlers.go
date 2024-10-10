@@ -1,0 +1,41 @@
+package main
+
+import "fmt"
+
+func handlerHelp(_ *state, _ command) error {
+	fmt.Println("Available commands:")
+	fmt.Println()
+	fmt.Println("register [username]")
+	fmt.Println("  Create a new user account")
+	fmt.Println()
+	fmt.Println("login [username]")
+	fmt.Println("  Log in to an existing account")
+	fmt.Println()
+	fmt.Println("addfeed [feed_name] [feed_url]")
+	fmt.Println("  Add a new RSS feed (requires login)")
+	fmt.Println()
+	fmt.Println("feeds")
+	fmt.Println("  List all available feeds")
+	fmt.Println()
+	fmt.Println("follow [feed_url]")
+	fmt.Println("  Follow a feed (requires login)")
+	fmt.Println()
+	fmt.Println("unfollow [feed_url]")
+	fmt.Println("  Unfollow a feed (requires login)")
+	fmt.Println()
+	fmt.Println("browse")
+	fmt.Println("  View recent posts from followed feeds (requires login)")
+	fmt.Println()
+	fmt.Println("users")
+	fmt.Println("  List all registered users")
+	fmt.Println()
+	fmt.Println("reset")
+	fmt.Println("  Reset the users table (use with caution)")
+	fmt.Println()
+	fmt.Println("agg")
+	fmt.Println("  Start the feed aggregator")
+	fmt.Println()
+	fmt.Println("help")
+	fmt.Println("  Display this help message")
+	return nil
+}
